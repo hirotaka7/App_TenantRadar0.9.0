@@ -94,7 +94,7 @@ with st.sidebar:
                 df_CBREDiv=pd.read_csv(f,encoding='utf-8')
 
 if zip_Capsule is None:
-    image=Image.open(os.path.join('Logo.png'))
+    image=Image.open('Logo.png')
     st.image(image,width=700)
     
 
