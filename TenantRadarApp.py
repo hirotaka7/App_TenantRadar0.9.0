@@ -7,6 +7,7 @@ from folium.plugins import BeautifyIcon
 import plotly.express as px
 import zipfile
 from PIL import Image
+import os
 
 BaseColor=['#80BBAD', '#435254', '#17E88F', '#DBD99A', '#D2785A', '#885073', '#A388BF', '#1F3765', '#3E7CA6', '#CAD1D3']
 PU_Start='<div style="font-size: 10pt; color : #435254; font-weight: bold;"><span style="white-space: nowrap;">'
@@ -93,7 +94,7 @@ with st.sidebar:
                 df_CBREDiv=pd.read_csv(f,encoding='utf-8')
 
 if zip_Capsule is None:
-    image=Image.open('Logo.png')
+    image=Image.open(os.path.join('Logo.png'))
     st.image(image,width=700)
     
 
